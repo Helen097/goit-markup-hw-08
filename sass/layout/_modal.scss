@@ -1,0 +1,197 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.2);;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1) visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.is-hidden.modal {
+      transform: translate(-50%, -50%) scaleY(0) scaleX(0);
+    }
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(1) scaleX(1);
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-header-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+  }
+ 
+  .modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .modal-close-blue:focus,
+  .modal-close-blue:hover {
+    fill:#2196F3;
+  }
+  .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .modal-heading {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 12px;
+  }
+  
+  .modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      border-color: var(--second-logo-color);  
+    }
+  }
+  
+  .modal-input:focus + svg,
+  .modal-input:hover + svg {
+    fill: var(--second-logo-color);
+  }
+  .modal-input-group {
+    margin-bottom: 10px;
+    & label {
+      margin-bottom: 4px;
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.01em;
+      color: #757575;
+    }
+  }
+ 
+  .modal-text {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px;
+  
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    resize: none;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+    border-color: var(--second-logo-color); 
+  }
+  }
+  
+  .modal-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal-input-wrapper {
+    position: relative;
+  }
+  
+  
+  .modal-politic-label::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 1px solid #212121;
+    margin-right: 8px;
+  }
+  label.modal-politic-label {
+    display: flex;
+    align-items: center;
+   
+  }
+  .visually-hidder {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+  
+  }
+  .modal-politic-chec {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+  }
+  .modal-politic-chec:checked + label::before {
+    border: none;
+    background-image: url(../img/chec.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--second-logo-color);
+  }
+  .modal-politic-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: var(--second-logo-color);
+    margin-left: 5px;
+  }
+  .modal-btn-sudmit {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .modal-btn {
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: var(--primary-header-color);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background: var(--second-logo-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      background-color: var(--second-background-color);
+    }
+  }
+ 
+  
