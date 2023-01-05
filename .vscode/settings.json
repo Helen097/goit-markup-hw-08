@@ -4,7 +4,7 @@
 // }
 
 {
-    "liveSassCompile.settings.formats":[
+    "liveSassCompile.settings.formats": [
        {
            "format": "expanded",
            "extensionName": ".css",
@@ -16,7 +16,38 @@
            "savePath": "/css"
        }
 ],
-// "liveServer.settings.multiRootWorkspaceName": "goit-markup-hw-08"
 }
-
+// {    
+//     "liveSassCompile.settings.formats":[       
+//     {          
+//          "format": "expanded",           
+//          "extensionName": ".css",           
+//          "savePath": "/css"       
+//          },      
+//           {           
+//             "format": "compressed",          
+//              "extensionName": ".min.css",           
+//              "savePath": "/css"       
+//              }   
+//              ]  
+    //          "liveSassCompile.settings.excludeList": [
+    //          "*/node_modules/*",
+    //          ".vscode/**"  
+    //          ],  
+    //          "liveSassCompile.settings.generateMap": true,   
+    //          "liveSassCompile.settings.autoprefix": [
+    //             "> 1%", 
+    //             "last 2 version"
+    //             ],
+    //             "liveServer.settings.port": 4500,
+    // "liveServer.settings.root": "/src",
+    // "liveServer.settings.CustomBrowser" : "chrome",
+    // "liveServer.settings.AdvanceCustomBrowserCmdLine": "chrome --incognito --remote-debugging-port=9222",
+    // "liveServer.settings.NoBrowser" : false,
+    // "liveServer.settings.ignoreFiles" : [
+    //         ".vscode/**",
+    //         "**/*.scss",
+    //         "**/*.sass"
+    // ]
+            // }
    

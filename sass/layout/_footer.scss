@@ -2,27 +2,70 @@
     background: var(--page-second-background);
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 0px;
+    }
     
   }
   .container-footer {
-    display: flex;
+    display: block;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+   
+  
   }
   .container-contacts {
+    
+   
+    @media screen and (min-width: 768px) {
     display: inline-block;
+      margin-left: 76px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+    }
   }
   .logo {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+
+  .container-contacts__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+     
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
   }
   span.logo-label {
     color: var(--second-logo-color);
   }
   .container-contacts__information {
     margin-top: 20px;
+    margin-bottom: 60px;
+   
+  }
+
+  .information__list {
+   
+    @media screen and (max-width: 1200px) {
+      text-align: center;  
+    }
+
   }
   
   .information__list .information__item + .information__item {
@@ -67,13 +110,27 @@
   .aur-social {
     justify-content: center;
     align-items: center; 
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        display: inline-block;
+        padding-bottom: 0px;
+        margin-left: 165px;
+        position: relative;
+        bottom: 50px;  
+      }
+      @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+        bottom: 0;  
+      }
   }
   
   .aur-social__title {
-    @extend %flex-align;
-    margin-bottom: 20px;
-    margin-left: 70px;
+    // @extend %flex-align;
+    // margin-bottom: 20px;
+    // margin-left: 70px;
     
+    margin-bottom: 20px;
   
     font-weight: 700;
     font-size: 14px;
@@ -81,6 +138,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--primary-header-color);
+
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+    }
   }
   .social-media__link {
     width: 100%;
@@ -98,18 +159,19 @@
   }
   .social-media__list {
     @extend %flex-align;
-    justify-content: center;
+    justify-content: center; 
+  }
+  // .aur-social__social-media {
+  //   margin-left: 70px;
     
-  }
-  .aur-social__social-media {
-    margin-left: 70px;
-  }
+  // }
   .social-media__items {
     width: 44px;
     height: 44px;
     &:not(:last-child) {
       margin-right: 10px;
     }
+   
   }
  
   .social-media__icons {
@@ -117,7 +179,10 @@
   }
  
   .subscribe {
-    margin-left: 93px;
+    
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;  
+    } 
   }
   .subscribe__title {
     font-weight: 700;
@@ -127,20 +192,42 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
+    
+    @media screen and (max-width: 1200px) {
+      text-align: center;
+     }
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+      
+    }
+  }
+  .search-form {
+    text-align: center;
   }
   .search-form__input {
-    width: 358px;
+    // width: 450px;
+    width: 100%;
     height: 50px;
-    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     background: var(--page-second-background);
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      width: 450px;
+      margin-bottom: 20px;  
+      }
+      @media screen and (min-width: 1200px) {
+        width: 358px;
+      }
   }
   .search-form__btn {
+    margin-top: 20px;
     width: 200px;
     height: 50px;
-    margin-left: 12px;
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
@@ -157,6 +244,15 @@
     &:hover {
     background-color: var(--second-background-color);
     }
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 1200px) {
+     display: inline-block;
+     margin-left: 12px;
+    }
+    
   }
 
   .search-form__icon {

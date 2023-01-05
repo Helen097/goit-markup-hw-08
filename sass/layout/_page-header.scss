@@ -1,20 +1,48 @@
 .hero {
   background: var(--page-second-background);
   text-align: center;
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding-bottom: 118px;
+  padding-top: 118px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
    
   }
   .hero-photo {
-    height: 600px;
-    max-width: 1600px;
+    // height: 600px;
+    // max-width: 1600px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+    ,rgba(47, 48, 58, 0.4)), url(../../images/hero_mob.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+      ,rgba(47, 48, 58, 0.4)), url(../../images/hero_mob-2x.jpg);
+    }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
+    @media screen and (min-width: 768px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+      ,rgba(47, 48, 58, 0.4)), url(../../images/hero_tab.jpg);
+      @include retina {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+      ,rgba(47, 48, 58, 0.4)), url(../../images/hero_tab-2x.jpg);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+    ,rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    @include retina {
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4)
+      ,rgba(47, 48, 58, 0.4)), url(../images/hero-2x.jpg);
+    }
+    }
     
   }
 
@@ -23,15 +51,20 @@
     margin-bottom: 30px;
   
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-header-color); 
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
   .hero__btn {
-    min-width: 216px;
+    min-width: 200px;
     height: 50px;
     border: none;
     cursor: pointer;
@@ -47,5 +80,12 @@
     &:hover {
     background-color: var(--second-background-color);
   }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 216px;
+    
   }
+
+  }
+
   

@@ -1,18 +1,43 @@
 .clients-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   .clients-section__title {
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 28px;
+    line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+     font-size: 36px;
+     margin-bottom: 50px;
+    }
+
   }
   .clients__list {
-    justify-content: center;
-    @extend %flex-align;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    // @media screen and (min-width: 480) {
+    //   margin-left: -30px;
+    // }
+    // @media screen and (min-width: 768px) {
+    //   margin-left: -30px;
+    //  }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: -30px;
+    }
+
+   
   }
   .clients__link {
     width: 100%;
@@ -24,6 +49,7 @@
     border-radius: 4px;
     transition: border-color cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--icon-color);
+    
     &:hover,
     &:focus {
     color: var(--second-logo-color);
@@ -31,11 +57,35 @@
     }
   }
   .clients__items {
-    width: 170px;
+    // width: 210px;
     height: 92px;
-    &:not(:last-child) {
-      margin-right: 30px;
+    width: calc((100% - 60px)/2);
+    margin-left: 30px;
+    margin-bottom: 30px;
+   
+    // @media screen and (max-width: 768) {
+    //   margin-left: 0;
+    // }
+   
+     
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 90px)/3);
+      margin-left: 30px;
+      
+     }
+
+     @media screen and (min-width: 1200px) {
+      width: 170px;
+      margin-left: 30px;
+      
     }
+
+    // &:not(:last-child) {
+    //   @media screen and (max-width: 767px) {
+    //     margin-bottom: 30px;
+    //   }
+    // }
+   
   }
   
   .clients__icons {
