@@ -364,7 +364,7 @@ span.logo-label {
 .menu-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   justify-content: space-between;
 }
 
@@ -382,7 +382,7 @@ span.logo-label {
 }
 
 .hero-photo {
-  width: 100%;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero_mob.jpg);
