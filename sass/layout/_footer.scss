@@ -4,7 +4,7 @@
     padding-bottom: 60px;
 
     @media screen and (min-width: 1200px) {
-      padding-bottom: 0px;
+      // padding-bottom: 0px;
     }
     
   }
@@ -56,8 +56,11 @@
   }
   .container-contacts__information {
     margin-top: 20px;
-    margin-bottom: 60px;
    
+    
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 60px;
+    }
   }
 
   .information__list {
@@ -222,6 +225,7 @@
       }
       @media screen and (min-width: 1200px) {
         width: 358px;
+        margin-bottom: 0;
       }
   }
   .search-form__btn {
